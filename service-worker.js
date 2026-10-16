@@ -1,5 +1,5 @@
 /* Zorgt dat de app ook zonder internet opent en zich vanzelf bijwerkt. */
-const CACHE = 'medicatie-v1.5.0';
+const CACHE = 'medicatie-v1.5.1';
 const BESTANDEN = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(BESTANDEN)).then(() => self.skipWaiting()));
